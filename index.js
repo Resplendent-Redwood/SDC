@@ -1,11 +1,12 @@
 const express = require('express');
-const router = require('./router/controllers.js')
+const router = require('./router/index.js')
 const PORT = 3010;
+
 
 const app = express();
 app.use( express.json() );
 
-app.use('/', router.func);
+app.use('/', router);
 
 
 
